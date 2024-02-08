@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa (JogoDaVelha)</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            margin: 20px auto;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000000;
+            text-align: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #encerrarJogo {
+            display: none;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: white;
+            color: red;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+    </style>
+    <h1>JogoDaVelha</h1>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- Botão de encerramento do jogo -->
+    <button id="encerrarJogo" onclick="EncerrarJogo()" >Encerrar Jogo</button>
+
+    <script>
+        let jogadorAtual = 'X';
+        let td = document.querySelectorAll('td');
+        let partidaEncerrada = false;
+
+        // Adiciona evento de clique a cada célula
+        td.forEach(x => {
+            x.addEventListener('click', () => {
+                if (x.innerHTML != '' || partidaEncerrada) {
+                    return;
+                }
+                x.innerHTML = jogadorAtual;
+                Vencedor();
+                jogadorAtual = (jogadorAtual === 'X') ? 'O' : 'X';
+            });
+        });
+
+        // Adiciona evento de clique ao botão de encerramento do jogo
+      document.getElementById('encerrarJogo').addEventListener('click' , () => {
+        ReiniciarJogo()
+      })
+
+        // Função para verificar o vencedor
+        function Vencedor() {
+            const combinacoes = [
+                [0, 1, 2], [0, 3, 6], [0, 4, 8],
+                [3, 4, 5], [1, 4, 7], [2, 4, 6],
+                [6, 7, 8], [2, 5, 8]
+            ];
+
+            for (let i = 0; i < combinacoes.length; i++) {
+                const combinacao = combinacoes[i];
+                const [a, b, c] = combinacao;
+
+                if (td[a].innerHTML !== '' &&
+                    td[a].innerHTML === td[b].innerHTML &&
+                    td[a].innerHTML === td[c].innerHTML) {
+                    alert(`Jogador ${td[a].innerHTML} venceu!`);
+                    partidaEncerrada = true;
+                    // Mostra o botão de encerramento do jogo
+                    document.getElementById('encerrarJogo').style.display = 'block';
+                        return;
+
+                }
+            }
+        }
+
+        // Função para encerrar o jogo
+       function EncerrarJogo() {
+        alert("Jogo encerrado!")
+        partidaEncerrada = true;
+        ReiniciarJogo()
+       }
+
+           
+        
+
+        // Função para reiniciar o jogo
+        function ReiniciarJogo() {
+            // Oculta o botão de encerramento do jogo
+            document.getElementById('encerrarJogo').style.display = 'none';
+            // Limpa o conteúdo de todas as células
+            
+           td.forEach(x => {
+            x.innerHTML = ''
+           })
+            // Reinicia as variáveis do jogo
+           
+            partidaEncerrada = false;
+        }
+    </script>
+</body>
+
+</html>

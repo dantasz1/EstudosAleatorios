@@ -1,0 +1,34 @@
+
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cartaoLateral {
+    width: 17vw;
+    height: 20vh;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 5px;
+   text-align: center;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.credit-card-number   {
+
+    color: white;
+    font-size : 1.7em;
+   margin-top: 12vh;
+}
+.cardholder-name , .expiration-date {
+   margin: 5px;
+   
+   
+ 
+
+}
+
+.cvc {
+
+}
