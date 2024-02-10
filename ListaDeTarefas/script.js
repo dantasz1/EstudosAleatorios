@@ -44,33 +44,27 @@ input.addEventListener('keyup' , function(event){
     }
 })
 
-
+ // PARAR PRA ENTENDER AS DUAS FUNÇOES//
 function marcarTarefa(id) {
-var item = document.getElementById(id)
-var classe = item.getAttribute('class')
-if(classe =='item') {
-    item.classList.add('clicado')
+    var item = document.getElementById(id)
+    var classe = item.getAttribute('class')
 
-    var icone = document.getElementById('iconeImagem' + id )
-    icone.classList.remove('material-symbols-outlined')
+    if(classe ==='item') {
+        item.classList.add('clicado')
     
-    icone.classList.add('󰗠')
-
-item.parentNode.appendChild(item)
-
-} else {
-    item.classList.remove('clicado')
-
-    var icone = document.getElementById('iconeImagem' + id )
-    icone.classList.remove('')
-    icone.classList.add('material-symbols-outlined ')
-}
-}
-// function marcarTarefa(id) {
-    // var item = document.getElementById(id);
-    // item.classList.toggle('clicado');
-// 
-    // var icone = document.getElementById('iconeImagem' + id);
-    // icone.classList.toggle('material-symbols-outlined', !item.classList.contains('clicado'));
-    // icone.classList.toggle('material-symbols-checked', item.classList.contains('clicado'));
-// }
+        var icone = document.getElementById('iconeImagem' + id )
+        
+    
+        icone.textContent = 'check_box';
+    
+    item.parentNode.appendChild(item)
+    
+    } else {
+        item.classList.remove('clicado')
+    
+        var icone = document.getElementById('iconeImagem' + id )
+        icone.textContent = 'check_box'
+        
+    }
+    }
+    
