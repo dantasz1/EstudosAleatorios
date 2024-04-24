@@ -1,27 +1,33 @@
+/* Estilos base para todos os dispositivos */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
+
 h1 {
     text-align: center;
     font-size: 3rem;
 }
+
 header {
-display: flex;
-flex-flow: row wrap ;
-width: 80%;
-
-border: 1px solid black;
-margin: auto auto;
-
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    flex-flow: row wrap;
+    width: 80%;
+    border: 1px solid black;
+    margin: auto;
+    padding: 20px;
 }
+
 input {
-   height: 120px;
-   font-size: 2rem;
-   width: 80%;
-   padding-left: 10%;
+    height: 120px;
+    font-size: 2rem;
+    width: 80%;
+    padding-left: 10%;
 }
+
 .add {
     cursor: pointer;
     background: green;
@@ -30,16 +36,16 @@ input {
     border: none;
     height: 126px;
     width: 147.5px;
-
 }
+
 main {
     display: flex;
     flex-flow: row wrap;
     width: 80%;
-    margin: auto auto;
-    /* border: 1px solid rgb(0, 0, 0); */
+    margin: auto;
     padding-top: 40px;
 }
+
 .item {
     display: flex;
     justify-content: center;
@@ -49,35 +55,34 @@ main {
     width: 100%;
     box-shadow: 0 0 20px #ccc;
     margin-bottom: 2%;
-cursor: pointer;
+    cursor: pointer;
 }
+
 .item.clicado {
-    background: #d4f6d9 ;
+    background: #d4f6d9;
 }
-.item.clicado  .item-nome{
+
+.item.clicado .item-nome {
     text-decoration: line-through;
     color: gray;
 }
 
 .item-icone {
-    flex:20%;
-    /* border: 1px solid #ec620c; */
-    font-size: 1rem;
+    flex: 20%;
     text-align: center;
     font-size: 1rem;
 }
+
 .item-nome {
-    flex:55%;
-    /* border: 1px solid #f702aa; */
+    flex: 55%;
     font-size: 20px;
     font-weight: bold;
-    
+}
 
-}
 .item-botao {
-    flex:25%;
-    /* border: 1px solid #00f639; */
+    flex: 25%;
 }
+
 .delete {
     background-color: red;
     color: white;
@@ -87,3 +92,41 @@ cursor: pointer;
     width: 100%;
 }
 
+/* Media Query para telas menores que 600px (por exemplo, smartphones) */
+@media only screen and (max-width: 600px) {
+    header {
+        width: 100%; /* Ajusta a largura para ocupar toda a largura da tela */
+    }
+
+    input {
+        height: 80px; /* Reduz a altura do campo de entrada */
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do campo de entrada */
+        width: 90%; /* Ajusta a largura para ocupar 90% do espaço disponível */
+        text-align: center; /* Centraliza o texto horizontalmente */
+        margin: 0 auto; /* Centraliza o input horizontalmente */
+        padding: 10px; /* Adiciona um espaçamento interno */
+    }
+
+    .add {
+        height: 86px; /* Reduz a altura do botão "Adicionar" */
+        width: 90%; /* Define a largura para ocupar 90% do espaço disponível */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do botão "Adicionar" */
+    }
+
+    main {
+        padding-top: 20px; /* Reduz o espaçamento superior */
+    }
+
+    .item {
+        height: 60px; /* Reduz a altura dos itens da lista */
+        margin-bottom: 1%; /* Reduz o espaçamento entre os itens da lista */
+    }
+
+    .item-nome {
+        font-size: 16px; /* Reduz o tamanho da fonte do nome da tarefa */
+    }
+
+    .delete {
+        padding: 24px; /* Reduz o tamanho do botão "Deletar" */
+    }
+}

@@ -1,70 +1,75 @@
- let contador = 0;
+let contador = 0;
+let input = document.getElementById('inputTarefa');
+let main = document.getElementById('areaLista');
 
- let input = document.getElementById('inputTarefa')
- let btnAdd = document.getElementById('btnAdd')
- let main = document.getElementById('areaLista')
 function addTarefa() {
-    let valorInput = input.value
+    let valorInput = input.value.trim();
 
-    if ((valorInput !== "")  && (valorInput !== null) && (valorInput !== undefined) ) {
-        contador++
-        let novoItem = `<div id="${contador}" class="item">
-        <div  onclick= "marcarTarefa(${contador})" class="item-icone">
-            <span id= 'iconeImagem${contador}' class="material-symbols-outlined">
-                radio_button_unchecked
-                </span>
-        </div>
-        <div class="item-nome">
-            ${valorInput}
-        </div >
-        <div class="item-botao">
-            <button onclick= "deletar(${contador})" class="delete">Deletar</button>
+    if (valorInput) {
+        contador++;
+        let isChecked = false;
 
-        </div>
-    </div>`
-       // adicionar novo item no main
-        main.innerHTML += novoItem
-            // zerar o campinho ali do input
-            input.value = ''
-            input.focus();
+        let novoItem = `
+            <div id="item${contador}" class="item">
+                <div onclick="marcarTarefa(${contador})" class="item-icone">
+                    <span id="iconeImagem${contador}" class="material-symbols-outlined">
+                        ▢
+                    </span>
+                </div>
+                <div class="item-nome">
+                    ${valorInput}
+                </div>
+                <div class="item-botao">
+                    <button onclick="deletar(${contador})" class="delete">Deletar</button>
+                </div>
+            </div>`;
 
+        if (main) {
+            main.insertAdjacentHTML('beforeend', novoItem);
+        } else {
+            console.error('Elemento main não encontrado.');
+        }
 
+        input.value = '';
+        input.focus();
     }
 }
 
 function deletar(id) {
-var tarefa = document.getElementById(id)
-tarefa.remove()
+    let tarefa = document.getElementById(`item${id}`);
+
+    if (tarefa) {
+        tarefa.remove();
+    } else {
+        console.warn(`Tarefa com ID ${id} não encontrada.`);
+    }
 }
 
-input.addEventListener('keyup' , function(event){
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        btnAdd.click();
-    }
-})
-
- // PARAR PRA ENTENDER AS DUAS FUNÇOES//
 function marcarTarefa(id) {
-    var item = document.getElementById(id)
-    var classe = item.getAttribute('class')
+    let item = document.getElementById(`item${id}`);
+    let icone = document.getElementById(`iconeImagem${id}`);
 
-    if(classe ==='item') {
-        item.classList.add('clicado')
-    
-        var icone = document.getElementById('iconeImagem' + id )
-        
-    
-        icone.textContent = 'check_box';
-    
-    item.parentNode.appendChild(item)
-    
+    if (item && icone) {
+        if (!item.classList.contains('clicado')) {
+            item.classList.add('clicado');
+            icone.textContent = '☑';
+        } else {
+            item.classList.remove('clicado');
+            icone.textContent = '▢';
+        }
     } else {
-        item.classList.remove('clicado')
-    
-        var icone = document.getElementById('iconeImagem' + id )
-        icone.textContent = 'check_box'
-        
+        console.warn(`Elemento com ID ${id} não encontrado.`);
     }
-    }
-    
+}
+
+if (input) {
+    input.addEventListener('keyup', function(event) {
+        if (event.keyCode === 13) { // Tecla Enter
+            event.preventDefault();
+            addTarefa();
+        }
+    });
+} else {
+    console.error('Elemento input não encontrado para adicionar evento keyup.');
+}
+
