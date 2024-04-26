@@ -91,14 +91,39 @@ a:hover {
         text-decoration: none;
     }
 }
-
-
-
-
-
-/* Estilo da imagem de fundo do conteúdo principal */
-main {
-    background: url("imagens/modelo1barbeiro.jpg") no-repeat center center;
-    background-size: cover;
-    height: 88vh; /* Altura do conteúdo principal */
+#WhatsApp {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
+
+
+
+
+
+
+
+
+.main-primaria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 80vh;
+    background-color: #333;
+    /* Utilize a imagem de fundo e ajuste o alinhamento */
+    background-image: url("imagens/modelo1barbeiro.jpg");
+    background-size: cover; /* Cobrir o tamanho do elemento */
+    background-position: center; /* Centralizar a imagem */
+
+}
+
+
+/* Estilo para a imagem de fundo */
+
+
