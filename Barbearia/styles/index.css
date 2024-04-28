@@ -141,6 +141,83 @@ header {
     
 }
 
+/* =====SLIDES================== */
+
+
+.slide {
+    display: none;
+    text-align: center; /* Para centralizar o título */
+    position: relative;
+
+}
+.slide button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    max-height: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+.slide img {
+    width: 100%; /* Garantir que a imagem não ultrapasse a largura do contêiner */
+    max-height: 750px; /* Ajustar a altura máxima da imagem */
+    height: auto;
+    margin: auto; /* Centralizar a imagem horizontalmente */
+    display: block;
+ object-fit: cover;
+}
+.titulo-slide {
+    text-align: center;
+    color: var(--branco);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.slide-title {
+    
+    color: var(--branco);
+    font-size: 80px;
+
+        text-shadow:
+          3px 3px 2px var(--preto),
+          -3px 3px 2px var(--preto),
+          -3px -3px 0 var(--preto),
+          3px -3px 0 var(--preto);
+      
+}
+
+.titulo-slide img {
+    width: 200px;
+    height: auto;
+}
+
+.active {
+    display: block;
+}
+
+
 
 
 
