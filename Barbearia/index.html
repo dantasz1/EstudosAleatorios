@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💈Barbearia✂️</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
     <header>
-        <nav class="nav">
-            <a class="logo" href="/">Barbearia Premium</a>
+        <nav class="nav container">
+            <a class="logo" href="/"><img src="imagens\Logo.png" alt="logo barbearia"></a>
             <button id="hamburger" class="fa fa-bars" onclick="menuShow()"></button>
             <ul class="textos" id="menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="/">Agende</a></li>
-                <li><a href="/">Mais</a></li>
+                <li><a href="/">Nossa Marca</a></li>
+                <li><a href="/">Cortes</a></li>
+                <li><a href="/">Agendar</a></li> 
             </ul>
             <div class="redes_sociais">
-                <i id="WhatsApp" class="fa fa-whatsapp" style="font-size:24px"></i>
+              <a href="">  <i  id="WhatsApp" class="fa fa-whatsapp" style="font-size:24px"></i> </a>
+              <a href="">  <i id="instagram" class="fa fa-instagram" style="font-size:24px"></i> </a>
+              <a href=""> <i id="facebook" class="fa fa-facebook" style="font-size:24px"></i> </a> 
             </div>
             <div class="mobile-menu">
                 <li><a href="/">Home</a></li>
@@ -30,15 +34,8 @@
             </div>
         </nav>
     </header>
-
-    <main class="main-primaria">
-        <h1 class="namePrincipal">Barbearia Premium</h1>
-        <div class="background-image"></div>
-        
-    </main>
-    <main class="main-secundaria">
-        <img src="imagens/barbeiro.jpg" alt="Segunda Imagem" class="second-image">
-    </main>
+    
+    
     
     <script src="index.js"></script>
 </body>

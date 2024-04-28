@@ -1,51 +1,64 @@
-/* Reset de estilos padrão */
+@import  './variaveis.css';
+
+
 body {
-    margin: 0;
-    padding: 0;
     font-family: "Bebas Neue", sans-serif;
-    background-color: #333;
+}
+.container {
+    max-width: 1440px;
+   
 }
 
 /* Estilo dos links */
 a {
-    color: #fff;
+    color: var(--branco);
     text-decoration: none;
     transition: 0.3s;
+   
 }
 
 a:hover {
+    color: var(--vermelho);
     opacity: 0.7;
 }
 
-/* Estilo da logo */
-.logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-}
+
+
 
 /* Estilo da barra de navegação */
+header {
+    background-color: var(--cinza);
+}
+
 .nav {
     display: flex;
     justify-content: space-between; /* Distribui os elementos na barra */
     align-items: center;
-    background-color: #252525;
-    color: white;
+    margin: 0 auto ;
+    color: var(--branco);
     height: 12vh;
-    padding: 0 22vw; /* Espaçamento interno na barra */
+    padding: 0 20px;
 }
+
+
 
 /* Estilo dos itens do menu */
 .textos {
     display: flex;
     list-style: none;
-    font-size: large;
-    margin: 0; /* Remove margem padrão dos elementos */
+    font-size: 20px;
+    
 }
 
 .textos li {
     margin:  25px; /* Espaçamento entre os itens do menu */
 }
+.redes_sociais {
+    display: flex;
+    gap: 15px;
+}
+
+
 #hamburger {
     display: none;
 }
@@ -53,7 +66,14 @@ a:hover {
     display: none;
 
 }
-@media screen and (max-width: 750px) {
+
+@media screen and (max-width: 900px) {
+
+.logo img {
+    width: 250px;
+    height: auto;
+}
+
     .textos {
         display: none;
     }
@@ -91,39 +111,42 @@ a:hover {
         text-decoration: none;
     }
 }
+
+
 #WhatsApp {
     color: #fff;
+
     text-decoration: none;
-    cursor: pointer;
     background-color: transparent;
     border: none;
 }
 
-
-
-
-
-
-
-
-.main-primaria {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#instagram {
     color: #fff;
-    font-size: 60px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 80vh;
-    background-color: #333;
-    /* Utilize a imagem de fundo e ajuste o alinhamento */
-    background-image: url("imagens/modelo1barbeiro.jpg");
-    background-size: cover; /* Cobrir o tamanho do elemento */
-    background-position: center; /* Centralizar a imagem */
-
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+#facebook {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+@media screen and (max-width: 400px) {
+    .logo img {
+        width: 150px;
+        height: auto;
+    }
+    
 }
 
 
-/* Estilo para a imagem de fundo */
+
+
+
+
+
+
 
 
