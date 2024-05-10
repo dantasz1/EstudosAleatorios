@@ -9,11 +9,15 @@ function showSlide(n) {
 
 function nextSlide() {
     showSlide(currentSlide + 1);
+    console.log("clicou em proxima")
 }
 
 function previousSlide() {
     showSlide(currentSlide - 1);
+    console.log("clicou anterior")
 }
+
+
 
 showSlide(currentSlide); // Exibindo o primeiro slide inicialmente
 
