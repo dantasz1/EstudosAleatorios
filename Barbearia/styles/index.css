@@ -217,8 +217,62 @@ header {
     display: block;
 }
 
+/* Nossa marcaaaaaaaaaa */
+.NossaMarca {
+    position: relative;
+   background-image: url("../imagens/Imagem-Homem.png");
+   background-size: cover;
+   background-position: center;
+   height: 1000px;
+}
 
+.cards {
+   position: absolute;
+   display: flex;
+   align-items:center;
+   flex-direction: column;
+  
+   top: 50%;
+   left: 50%;
+transform: translate(-50%, -50%);
 
+}
+.card1, .card2 {
+    background-color: var(--cinza) ;
+    color: var(--branco);
+    height: 500px;
+    width: 550px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   padding: 0 50px;
+
+}
+.card1 {
+   position: absolute;
+   
+   bottom: 0;
+   right: 0;
+
+}
+.card2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.card1 h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card1 p, .card2 p {
+font-size: 24px;
+text-align: center;
+
+}
 
 
 
