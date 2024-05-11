@@ -273,6 +273,66 @@ font-size: 24px;
 text-align: center;
 
 }
+/* ================ CORTES --------------- */
+
+
+.cortes {
+    
+   background-image: url("../imagens/BackGroundCortes.png");
+   background-size: cover;
+   background-position: center;
+   height: 600px;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+
+   
+   align-items: center;
+   
+}
+
+.cortes h2 {
+    font-size: 50px;
+    text-align: start;
+    margin-bottom: 20px;
+    color: var(--branco);
+}
+.opçoesCortes {
+   
+   
+   display: flex;
+   align-items:center;
+  gap: 20px;
+  
+}
+.opçoesCortes  h3 {
+    color: var(--branco);
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5px;
+
+}
+.boxImagens {
+    position: relative;
+    display: inline-block;
+
+}
+.cortesImg {
+    display: block;
+
+    
+}
+.Valores {
+    position: absolute;
+    bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+    text-align: center;
+    color: var(--branco);
+    padding: 5px 10px;
+    font-size: 30px;
+
+}
 
 
 
