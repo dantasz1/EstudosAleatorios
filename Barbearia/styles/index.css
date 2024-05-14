@@ -217,7 +217,7 @@ header {
     display: block;
 }
 
-/* Nossa marcaaaaaaaaaa */
+/* ======= NOSSA MARCA ============= */
 .NossaMarca {
     position: relative;
    background-image: url("../imagens/Imagem-Homem.png");
@@ -277,7 +277,7 @@ text-align: center;
 
 
 .cortes {
-    
+    position: relative;
    background-image: url("../imagens/BackGroundCortes.png");
    background-size: cover;
    background-position: center;
@@ -334,8 +334,68 @@ transform: translateX(-50%);
 
 }
 
+/* ===================== CONTATO ================ */
+
+.contato {
+    background-image: url("../imagens/background-contato.png");
+    background-size: cover;
+   background-position: center;
+   height: 90vh;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   align-items: center;
+   color: var(--preto);
+}
+.card {
+    position: relative;
+    height: 70vh;
+    width: 60vw;
+    background-color: var(--branco);
+    display: flex;
+   flex-direction: column;
+ 
+ align-items: center;
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-size: 50px;
+   
+ 
+    
+}
+#contatoh2 {
+    text-align: center;
+    margin-bottom: 12.5vh
+    ;
 
 
+}
+.contato-info {
+    display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+    align-items: center;
+   gap: 13vw;
+   margin-bottom: 10px;
+}
+.contato-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--azul);
+    color: var(--branco);
+    cursor: pointer;
+   
+}
+
+button:hover {
+    
+}
 
 
 
