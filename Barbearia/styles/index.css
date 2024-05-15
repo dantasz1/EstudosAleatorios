@@ -426,8 +426,25 @@ button:hover {
     margin: 0; /* Remove a margem padrão do <h3> */
 }
 
-
-
+/* ================= RODA PE ========================= */
+.rodaPe {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    background-color: var(--cinza);
+}
+.cardRodaPe {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  max-width: 100%;
+  padding: 0 20px; /* Espaçamento interno horizontal para os elementos */
+  text-align: center; /* Alinhamento do texto centralizado */
+  color: var(--cinzaEscuro) ;/* Cor do texto */
+ gap: 10vw;
+}
 
 
 
