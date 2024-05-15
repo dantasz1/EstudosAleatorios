@@ -445,7 +445,15 @@ button:hover {
   color: var(--cinzaEscuro) ;/* Cor do texto */
  gap: 10vw;
 }
+#bigodeRodaPe {
+    width: 50px; /* Largura da imagem */
+    height: auto; /* Altura automática mantendo a proporção */
+}
 
+/* Estilização dos textos no rodapé */
+.cardRodaPe h6, .cardRodaPe h4 {
+    margin: 0; /* Remove margem padrão dos textos */
+}
 
 
 
