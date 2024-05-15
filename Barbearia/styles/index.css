@@ -28,9 +28,11 @@ a:hover {
 /* Estilo da barra de navegação */
 header {
     background-color: var(--cinza);
+   
 }
 
 .nav {
+    position: relative;
     display: flex;
     justify-content: space-between; /* Distribui os elementos na barra */
     align-items: center;
@@ -38,7 +40,9 @@ header {
     color: var(--branco);
     height: 12vh;
     padding: 0 20px;
+    
 }
+
 
 
 
@@ -218,6 +222,25 @@ header {
 }
 
 /* ======= NOSSA MARCA ============= */
+
+/* Classe para ocultar os elementos e definir a transição */
+
+/* Classe para animação de slide da direita */
+.slide-right {
+    transform: translateX(0); /* Altera a transformação para 0 para deslizar da direita para a esquerda */
+    opacity: 1; /* Garante que a opacidade seja 1 ao mostrar o elemento */
+}
+
+/* Classe para animação de slide da esquerda */
+.slide-left {
+    transform: translateX(0); /* Altera a transformação para 0 para deslizar da esquerda para a direita */
+    opacity: 1; /* Garante que a opacidade seja 1 ao mostrar o elemento */
+}
+
+
+
+
+
 .NossaMarca {
     position: relative;
    background-image: url("../imagens/Imagem-Homem.png");
@@ -237,17 +260,20 @@ header {
 transform: translate(-50%, -50%);
 
 }
+/* Estilos iniciais para os cards */
 .card1, .card2 {
-    background-color: var(--cinza) ;
+    background-color: var(--cinza);
     color: var(--branco);
     height: 500px;
     width: 550px;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   padding: 0 50px;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    opacity: 0; /* Começa totalmente transparente */
+    transition: opacity 0.9s ease; /* Transição suave da opacidade */
 }
+
 .card1 {
    position: absolute;
    
