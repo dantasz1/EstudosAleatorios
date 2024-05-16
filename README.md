@@ -32,12 +32,17 @@ Link do Site:
 - `index.js`: Script principal para funcionalidades como menu móvel e galeria de slides.
   
 ## Funcionalidades
-Menu de Navegação: Permite acesso fácil às diferentes partes do site, incluindo informações sobre a barbearia e serviços oferecidos.
-Galeria de Cortes: Apresenta imagens dos cortes disponíveis, permitindo aos clientes escolherem seu estilo desejado.
-Agendamento Online: Os clientes podem agendar serviços diretamente pelo site, proporcionando conveniência e praticidade.
-Responsividade: O site é totalmente responsivo, adaptando-se a diferentes tamanhos de tela para uma experiência consistente.
-Contribuições
+- **Menu de Navegação*: Permite acesso fácil às diferentes partes do site, incluindo informações sobre a barbearia e serviços oferecidos.
+- **Galeria de Cortes*: Apresenta imagens dos cortes disponíveis, permitindo aos clientes escolherem seu estilo desejado.
+- **Agendamento Online*: Os clientes podem agendar serviços diretamente pelo site, proporcionando conveniência e praticidade.
+- **Responsividade*: O site é totalmente responsivo, adaptando-se a diferentes tamanhos de tela para uma experiência consistente.
+  
+## Contribuições
 Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou correções de bugs, sinta-se à vontade para abrir uma issue ou criar um pull request.
 
 Screenshots do Projeto
-(Inserir aqui algumas capturas de tela do site para visualização rápida)
+![image](https://github.com/dantasz1/EstudosAleatorios/assets/134528492/72cf33fa-2df5-4055-ac8e-9819c4e987b6)
+
+![image](https://github.com/dantasz1/EstudosAleatorios/assets/134528492/b44d0ec6-6623-4054-8b6f-2afbbdbc7c4b)
+
+
