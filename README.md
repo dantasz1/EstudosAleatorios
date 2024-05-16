@@ -25,19 +25,13 @@ Link do Site:
 ## Estrutura de Arquivos
 - `index.html`: Página inicial do site com informações sobre a barbearia e serviços oferecidos.
 - `styles/:` Pasta contendo arquivos CSS para estilização do site.
-reset.css: Reset CSS para garantir consistência entre os navegadores.
-index.css: Estilos específicos da página inicial.
-imagens/: Pasta com imagens utilizadas no site, incluindo o logotipo da barbearia e fotos dos cortes.
-JavaScript/: Pasta contendo scripts JavaScript para interatividade.
-index.js: Script principal para funcionalidades como menu móvel e galeria de slides.
-Uso
-Para visualizar o site localmente:
-
-Clone o repositório ou faça o download dos arquivos.
-Abra o arquivo index.html em um navegador da web.
-A partir daí, você poderá explorar as diferentes seções do site, agendar um serviço e aprender mais sobre a Barbearia Premium.
-
-Funcionalidades
+- `reset.css`: Reset CSS para garantir consistência entre os navegadores.
+- `index.css`: Estilos específicos da página inicial.
+- `imagens/`: Pasta com imagens utilizadas no site, incluindo o logotipo da barbearia e fotos dos cortes.
+- `JavaScript/`: Pasta contendo scripts JavaScript para interatividade.
+- `index.js`: Script principal para funcionalidades como menu móvel e galeria de slides.
+  
+## Funcionalidades
 Menu de Navegação: Permite acesso fácil às diferentes partes do site, incluindo informações sobre a barbearia e serviços oferecidos.
 Galeria de Cortes: Apresenta imagens dos cortes disponíveis, permitindo aos clientes escolherem seu estilo desejado.
 Agendamento Online: Os clientes podem agendar serviços diretamente pelo site, proporcionando conveniência e praticidade.
