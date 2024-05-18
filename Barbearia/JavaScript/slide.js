@@ -37,6 +37,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
 // Seleciona os elementos dos cards
 const card1 = document.querySelector('.card1');
 const card2 = document.querySelector('.card2');

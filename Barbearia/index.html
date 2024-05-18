@@ -9,15 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav  id="navbar"      class="nav container">
-            <a class="logo" href="/"><img src="imagens\Logo.png" alt="logo barbearia"></a>
+            <a class="logo" href="#slidebox"><img src="imagens\Logo.png" alt="logo barbearia"></a>
             <button id="hamburger" class="fa fa-bars" onclick="menuShow()"></button>
             <ul class="textos" id="menu">
-                <li><a href="/">Home</a></li>
+                <li><a href="#slidebox">Home</a></li>
                 <li><a href="#nossa-marca">Nossa Marca</a></li>
                 <li><a href="#cortes">Cortes</a></li>
                 <li><a href="#contato">Agendar</a></li>
@@ -35,23 +38,22 @@
         </nav>
     </header>
     <main>
-        <section class="slidebox">
+        <section id="slidebox" class="slidebox">
             <div class="slideshow-container">
                 <div class="titulo-slide">
                     <h2 class="slide-title">Barbearia Premium</h2>
+                    
                     <img src="imagens\Bigode.png" alt="bigode">
                 </div>
 
                 <div class="slide active">
-                    <img src="imagens\barbeiro.jpg" alt="Imagem 1">
-                    <button class="prev" onclick="previousSlide()">&#10094;</button>
-                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                    <img src="imagens\Group 3.png" alt="Imagem 1">
+                    
                 </div>
 
                 <div class="slide">
                     <img src="imagens\modelo1barbeiro.jpg" alt="Imagem 2">
-                    <button class="prev" onclick="previousSlide()">&#10094;</button>
-                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                    
                 </div>
             </div>
         </section>
