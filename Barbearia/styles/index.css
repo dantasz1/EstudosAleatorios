@@ -1,5 +1,8 @@
 @import './variaveis.css';
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "Bebas Neue", sans-serif;
@@ -440,6 +443,7 @@ margin-bottom: 2vh;
         width: 220px;
         height: 250px;
     }
+    
 }
 
 /* ================= RODA PE ========================= */
