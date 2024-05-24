@@ -19,24 +19,7 @@ function previousSlide() {
 
 
 
-showSlide(currentSlide); // Exibindo o primeiro slide inicialmente
 
-// Função para rolagem suave ao clicar nos links do menu
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 50, // Ajuste opcional para compensar o cabeçalho
-                behavior: 'smooth' // Adiciona o efeito de rolagem suave
-            });
-        }
-    });
-});
 
 // Seleciona os elementos dos cards
 const card1 = document.querySelector('.card1');
@@ -46,7 +29,7 @@ const card2 = document.querySelector('.card2');
 function showCardsOnScroll() {
     // Verifica a posição vertical de rolagem da página
     const scrollPosition = window.scrollY;
-    const triggerOffset = 200; // Define a posição de rolagem para acionar a exibição dos cards
+    const triggerOffset = 50; // Define a posição de rolagem para acionar a exibição dos cards
 
     if (scrollPosition > triggerOffset) {
         // Se a página for rolada para baixo mais do que o offset definido, mostra os cards

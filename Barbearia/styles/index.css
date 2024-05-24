@@ -1,14 +1,12 @@
-@import  './variaveis.css';
+@import './variaveis.css';
 
 
 body {
     font-family: "Bebas Neue", sans-serif;
-    
-
 }
+
 .container {
     max-width: 1440px;
-   
 }
 
 /* Estilo dos links */
@@ -16,7 +14,6 @@ a {
     color: var(--branco);
     text-decoration: none;
     transition: 0.3s;
-   
 }
 
 a:hover {
@@ -24,54 +21,49 @@ a:hover {
     opacity: 0.7;
 }
 
-
-
-
 /* Estilo da barra de navegação */
 header {
     background-color: var(--cinza);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Para garantir que a navbar fique acima de outros elementos */
-   
+    z-index: 1000;
+    /* Para garantir que a navbar fique acima de outros elementos */
 }
 
 .nav {
     position: relative;
     display: flex;
-    justify-content: space-between; /* Distribui os elementos na barra */
+    justify-content: space-between;
+    /* Distribui os elementos na barra */
     align-items: center;
-    margin: 0 auto ;
+    margin: 0 auto;
     color: var(--branco);
     height: 12vh;
     padding: 0 20px;
-    
 }
-
-
-
 
 /* Estilo dos itens do menu */
 .textos {
     display: flex;
     list-style: none;
     font-size: 20px;
-    
 }
 
 .textos li {
-    margin:  25px; /* Espaçamento entre os itens do menu */
+    margin: 25px;
+    /* Espaçamento entre os itens do menu */
 }
+
 .redes_sociais {
     display: flex;
     gap: 15px;
 }
 
-
 #hamburger {
     display: none;
 }
+
 .mobile-menu {
     display: none;
 
@@ -79,10 +71,10 @@ header {
 
 @media screen and (max-width: 900px) {
 
-.logo img {
-    width: 250px;
-    height: auto;
-}
+    .logo img {
+        width: 250px;
+        height: auto;
+    }
 
     .textos {
         display: none;
@@ -137,113 +129,70 @@ header {
     background-color: transparent;
     border: none;
 }
+
 #facebook {
     color: #fff;
     text-decoration: none;
     background-color: transparent;
     border: none;
 }
+
 @media screen and (max-width: 400px) {
     .logo img {
         width: 150px;
         height: auto;
     }
-    
-}
-
-/* =====SLIDES================== */
-
-
-.slide {
-    display: none;
-    text-align: center; /* Para centralizar o título */
-    position: relative;
 
 }
-.slide button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 36px;
-    cursor: pointer;
-}
-.prev {
-    left: 10px;
+
+/* =====Background========= */
+
+.backgroundBox {
+    max-height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.next {
-    right: 10px;
+.background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
-.slide img {
-    width: 100%; /* Garantir que a imagem não ultrapasse a largura do contêiner */
-    max-height: 750px; /* Ajustar a altura máxima da imagem */
-    height: auto;
-    margin: auto; /* Centralizar a imagem horizontalmente */
-    display: block;
- object-fit: cover;
-}
-.titulo-slide {
-    text-align: center;
-    color: var(--branco);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-.slide-title {
-    font-family: "Dancing Script";
-    
-    color: var(--branco);
-    font-size: 80px;
-
-        
-}
-
-.titulo-slide img {
-    width: 200px;
-    height: auto;
-}
-
-.active {
-    display: block;
-}
 
 /* ======= NOSSA MARCA ============= */
 
-
-
-
-
-
-
 .NossaMarca {
     position: relative;
-   background-image: url("../imagens/Imagem-Homem.png");
-   background-size: cover;
-   background-position: center;
-   height: 1000px;
+    background-image: url("../imagens/Imagem-Homem.png");
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
 }
 
 .cards {
-
-   position: absolute;
-   display: flex;
-   align-items:center;
-   flex-direction: column;
-  
-   top: 50%;
-   left: 50%;
-transform: translate(-50%, -50%);
-
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 /* Estilos iniciais para os cards */
-.card1, .card2 {
+.card1,
+.card2 {
     background-color: var(--cinza);
     color: var(--branco);
     height: 500px;
@@ -252,22 +201,20 @@ transform: translate(-50%, -50%);
     justify-content: center;
     flex-direction: column;
     padding: 0 50px;
-    opacity: 0; /* Começa totalmente transparente */
-    transition: opacity 0.9s ease; /* Transição suave da opacidade */
+    opacity: 0;
+    transition: opacity 0.9s ease;
 }
 
 .card1 {
-   position: absolute;
-   
-   bottom: 0;
-   right: 0;
-
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
+
 .card2 {
     position: absolute;
     top: 0;
     left: 0;
-
 }
 
 .card1 h2 {
@@ -276,28 +223,43 @@ transform: translate(-50%, -50%);
     margin-bottom: 20px;
 }
 
-.card1 p, .card2 p {
-    font-family: "Sansita Swashed"; 
-font-size: 24px;
-text-align: center;
+.card1 p,
+.card2 p {
+    font-family: "Sansita Swashed";
+    font-size: 24px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1240px) {
+    .cards {
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .card1,
+    .card2 {
+        width: 100%;
+        position: static;
+        height: 450px;
+    }
 
 }
-/* ================ CORTES --------------- */
 
+
+/* ================ CORTES --------------- */
 
 .cortes {
     position: relative;
-   background-image: url("../imagens/BackGroundCortes.png");
-   background-size: cover;
-   background-position: center;
-   height: 600px;
-   display: flex;
-   justify-content: center;
-   width: 100%;
-
-   
-   align-items: center;
-   
+    background-image: url("../imagens/BackGroundCortes.png");
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .cortes h2 {
@@ -306,40 +268,51 @@ text-align: center;
     margin-bottom: 20px;
     color: var(--branco);
 }
+
 .opçoesCortes {
-   
-   
-   display: flex;
-   align-items:center;
-  gap: 20px;
-  
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
-.opçoesCortes  h3 {
+
+.opçoesCortes h3 {
     color: var(--branco);
     text-align: center;
     font-size: 30px;
     margin-top: 5px;
-
 }
+
 .boxImagens {
     position: relative;
     display: inline-block;
-
 }
+
 .cortesImg {
     display: block;
-
-    
+    max-width: 100%;
+    height: auto;
 }
+
 .Valores {
     position: absolute;
     bottom: 0;
-left: 50%;
-transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     color: var(--branco);
     padding: 5px 10px;
     font-size: 30px;
+}
+
+@media screen and (max-width: 1240px) {
+
+    .cortes h2 {
+        text-align: center;
+    }
+
+    .opçoesCortes {
+        flex-direction: column;
+    }
 
 }
 
@@ -348,52 +321,49 @@ transform: translateX(-50%);
 .contato {
     background-image: url("../imagens/background-contato.png");
     background-size: cover;
-   background-position: center;
-   height: 90vh;
-   display: flex;
-   justify-content: center;
-   width: 100%;
-   align-items: center;
-   color: var(--preto);
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    color: var(--preto);
 }
+
 .card {
     position: relative;
     height: 70vh;
     width: 60vw;
     background-color: var(--branco);
     display: flex;
-   flex-direction: column;
- 
- align-items: center;
- padding: 20px;
- border-radius: 10px;
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  font-size: 50px;
-   
-
-    
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    font-size: 50px;
 }
+
 #contatoh2 {
     text-align: center;
-    margin-bottom: 11vh
-    ;
-
-
+    margin-bottom: 11vh;
 }
+
 .contato-info {
     display: flex;
-   flex-direction: row;
-   justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-   gap: 5vw;
-   margin-bottom: 10px;
-
-   flex-direction: row;
+    gap: 5vw;
+    margin-bottom: 10px;
 }
+
 .contato-item {
     margin-bottom: 20px;
     text-align: center;
 }
+
 button {
     padding: 10px 20px;
     border: none;
@@ -407,32 +377,69 @@ button {
 button:hover {
     background-color: var(--vermelho);
     color: var(--branco-hover);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra suave */
 }
 
 .localizacao {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    
-    text-align: center; /* Alinha o conteúdo ao centro */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+
+    text-align: center;
+    /* Alinha o conteúdo ao centro */
 }
 
 .conteudo {
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
-  
+    align-items: center;
+    /* Alinha os itens verticalmente */
+
 }
 
 #local {
     font-size: 24px;
-    margin-right: 10px; /* Espaçamento à direita do ícone */
+    margin-right: 10px;
+    /* Espaçamento à direita do ícone */
     color: var(--vermelho);
 }
 
 #nomeDaRua {
-    margin: 0; /* Remove a margem padrão do <h3> */
+    margin: 0;
+    /* Remove a margem padrão do <h3> */
+}
+
+@media screen and (max-width: 1240px) {
+
+#contatoh2 {
+margin-bottom: 2vh;
+}
+    .contato-info {
+        flex-direction: column;
+        gap: .5vw;
+    }
+    .localizacao iframe {
+        width: 400px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:630px) {
+    #contatoh2 {
+        font-size: 32px;
+    }
+    .contato-item h2 {
+        font-size: 32px;
+    }
+    #nomeDaRua {
+        font-size: 32px;
+    }
+    .localizacao iframe {
+        width: 220px;
+        height: 250px;
+    }
 }
 
 /* ================= RODA PE ========================= */
@@ -444,25 +451,33 @@ button:hover {
     height: 100px;
     background-color: var(--cinza);
 }
+
 .cardRodaPe {
     display: flex;
     justify-content: space-around;
     align-items: center;
-  max-width: 100%;
-  padding: 0 20px; /* Espaçamento interno horizontal para os elementos */
-  text-align: center; /* Alinhamento do texto centralizado */
-  color: var(--cinzaEscuro) ;/* Cor do texto */
- gap: 10vw;
+    max-width: 100%;
+    padding: 0 20px;
+    /* Espaçamento interno horizontal para os elementos */
+    text-align: center;
+    /* Alinhamento do texto centralizado */
+    color: var(--cinzaEscuro);
+    /* Cor do texto */
+    gap: 10vw;
 }
+
 #bigodeRodaPe {
-    width: 50px; /* Largura da imagem */
-    height: auto; /* Altura automática mantendo a proporção */
+    width: 50px;
+    /* Largura da imagem */
+    height: auto;
+    /* Altura automática mantendo a proporção */
 }
 
 /* Estilização dos textos no rodapé */
-.cardRodaPe h6, .cardRodaPe h4 {
-    margin: 0; /* Remove margem padrão dos textos */
+.cardRodaPe h6,
+.cardRodaPe h4 {
+    margin: 0;
+    /* Remove margem padrão dos textos */
 }
 
-
-
+/* Estilos principais aqui */
